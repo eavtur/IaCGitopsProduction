@@ -17,4 +17,9 @@ resource "aws_instance" "ec2" {
     Name = var.instance_name
   }
 
+  depends_on = [
+    aws_subnet.public-subnet,
+    aws_security_group.security-group,
+    aws_iam_instance_profile.instance-profile
+  ]
 }

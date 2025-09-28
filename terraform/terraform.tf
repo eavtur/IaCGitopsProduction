@@ -7,7 +7,7 @@ terraform {
   }
 
   backend "s3" {
-    bucket = "terraformgitopsaws"
+    bucket = "terraformgitopsaws-kuzia"
     key    = "terraform.tfstate"
     region = "us-east-1"
   }
